@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="css/style.css">
+
+</head>
+<body>
+
+  <form name="agregarD" class="modal-content animate" action="">
+      <label for="nombd"><b>Nombre Disfraz</b></label>
+        <input id = "nombre-disfraz" type="text" placeholder="Ingrese nombre" name="nombd" >
+
+        <h3><b>Descripción Disfraz</b></h3>
+        <textarea id = "descripcion-disfraz" type="text" rows="15" cols = "40" placeholder="Ingrese descripción" name="descd"></textarea>
+
+
+        <h3>Categoria</h3>
+      <select id = "categorias"></select>
+      <br>
+      <h3>Talla</h3>
+      <select id = "tallas"></select>
+      <br>
+      <br>
+
+    <div class="container">
+      
+
+        <label for="nc"><b>Nombre solicitante</b></label>
+        <input type="text" placeholder="Ingrese nombre" size="80" name="nc">
+
+        <label for="ec"><b>Email solicitante</b></label>
+        <input type="text" placeholder="Ingrese Email" size="30" name="ec">
+
+        <label for="ncc"><b>Numero celular</b></label>
+        <input type="text" placeholder="+56" size="15" name="ncc">
+      <h3>Región</h3>
+      <select id = "regiones"></select>
+      <br>
+      <h3>Comuna</h3>
+      <select id = "comunas"></select>
+      <br>
+      <br>
+
+      <button onclick="validaenvia()" type="submit">Enviar</button>
+    </div>
+
+    <div class="container" style="background-color:#f1f1f1">
+      <a href="index.html" type="button">Volver</button>
+    </div>
+  </form>
+<script src="js/validations.js"></script>
+<script src="js/jquery-3.4.1.min.js"></script>
+<script src="js/regionesycomunas.js"></script>
+<script src="js/catalla.js"></script>
+
+</body>
+
+</html>

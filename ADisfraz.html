@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<style type="text/css">
+	.border-box { 
+		margin-left: auto;
+		margin-right: auto;
+		width: 140px;
+  		height: 18px;
+		border: 3px solid gray;
+		border-radius: 10px;
+  		background: white;
+}
+</style>
+
+</head>
+<body>
+
+  <form name="agregarD" class="modal-content animate" action="">
+
+    <div class="container">
+    	<h3>Región</h3>
+    	<select id = "regiones"></select>
+    	<br>
+    	<h3>Comuna</h3>
+    	<select id = "comunas"></select>
+    	<br>
+    	<br>
+      	<label for="nombd"><b>Nombre Disfraz</b></label>
+      	<input id = "nombre-disfraz" type="text" placeholder="Ingrese nombre" name="nombd" >
+
+      	<h3><b>Descripción Disfraz</b></h3>
+      	<textarea id = "descripcion-disfraz" type="text" rows="15" cols = "40" placeholder="Ingrese descripción" name="descd"></textarea>
+
+
+        <h3>Categoria</h3>
+    	<select id = "categorias"></select>
+    	<br>
+    	<h3>Talla</h3>
+    	<select id = "tallas"></select>
+    	<br>
+    	<br>
+
+    	<label for="img"><b>Foto disfraz</b></label>
+    	<div id="boxes">
+    	<div class="active">
+    	<input id="Foto-disfraz" type="file" name="img">
+    	</div>	
+    	</div>
+    	<br>
+    	<div id="addbutton" class="border-box">agregar-imagen</div>
+		<br>
+
+      	<label for="nc"><b>Nombre contacto</b></label>
+      	<input type="text" id ="nombre" placeholder="Ingrese nombre" name="nc">
+
+      	<label for="ec"><b>Email de contacto</b></label>
+      	<input type="text" id="email" placeholder="Ingrese Email" name="ec">
+
+      	<label for="ncc"><b>Numero celular contacto</b></label>
+      	<input type="text" id="celular" placeholder="+56" name="ncc">
+
+
+      <button onclick="validaenvia()" type="submit">Enviar</button>
+    </div>
+
+    <div class="container" style="background-color:#f1f1f1">
+      <a href="index.html" type="button">Volver</button>
+    </div>
+  </form>
+<script src="js/validations.js"></script>
+<script src="js/jquery-3.4.1.min.js"></script>
+<script src="js/regionesycomunas.js"></script>
+<script src="js/catalla.js"></script>
+<script>
+	var int = 0;
+	let addbutton = document.getElementById("addbutton");
+addbutton.addEventListener("click", function() {
+  let boxes = document.getElementById("boxes");
+  let clone = boxes.firstElementChild.cloneNode(true);
+  if(int < 4){
+  boxes.appendChild(clone);
+  int++;
+}
+});
+</script>
+
+</body>
+
+</html>

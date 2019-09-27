@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+.collapsible {
+  background-color: #ffffff;
+  color: black;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
+
+.active, .collapsible:hover {
+  background-color: #781;
+}
+
+.content {
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+  background-color: #ffffff;
+}
+</style>
+</head>
+<body>
+   <h2>Ver disfraces</h2>
+<div style="text-align: center;">
+<table border ="1" style="margin: 0 auto;">
+	<th>Nombre disfraz</th>
+	<th>Región</th>
+	<th>Comuna</th>
+	<th>Categoría</th>
+	<th>Talla</th>
+	<th>Nombre contacto</th>
+</table>
+</div>
+<button class="collapsible"><table border = "1" style="margin: 0 auto;">
+	<th>Batman</th>
+	<th>Región metropolitana</th>
+	<th>Lo prado</th>
+	<th>Infantil niño</th>
+	<th>4-5 años</th>
+</table></button>
+<div class="content">
+  	Nombre: Batman.
+  	<br>
+  	Descripción: Traje para niño en muy buen estado, ver imagen.
+  	<br>
+  	Categoría: Infantil.
+  	<br>
+  	Talla: 4-5 años.
+  	<br>
+  	Nombre contacto: Roberto moia.
+  	<br>
+  	Email de contacto: roerto@gmail.com.
+  	<br>
+  	Número celular de contacto: +569 59485948.
+  	<br>
+   <img src="img/batman1.jpg" id="imagen" width="320" height="240" onclick="cambiaTamanio()" />
+ </div>
+<button class="collapsible"><table border = "1" style="margin: 0 auto;">
+	<th>Superman</th>
+	<th>Arica y parinacota</th>
+	<th>Putre</th>
+	<th>Hombre</th>
+	<th>XL</th>
+</table></button>
+<div class="content">
+  	Nombre: Superman.
+  	<br>
+  	Descripción: Traje para adulto tiene un pequeño agujero en una pierna.
+  	<br>
+  	Categoría: Hombre.
+  	<br>
+  	Talla: XL.
+  	<br>
+  	Nombre contacto: Clark Kent.
+  	<br>
+  	Email de contacto: imnotsuperman@kripton.kt.
+  	<br>
+  	Número celular de contacto: +569 12345678.
+  	<br>
+   <img src="img/superman1.jpg" id="imagen" width="320" height="240" onclick="cambiaTamanio()" />
+</div>
+<button class="collapsible"><table border = "1" style="margin: 0 auto;">
+	<th>Harley Quinn</th>
+	<th>Región metropolitana</th>
+	<th>Maipú</th>
+	<th>Infantil niña</th>
+	<th>12-14 años</th>
+</table></button>
+<div class="content">
+  	Nombre: Harley quinn.
+  	<br>
+  	Descripción: Traje para niño en super buen estado, ver imágenes.
+  	<br>
+  	Categoría: Infantil niña.
+  	<br>
+  	Talla: 12-14 años.
+  	<br>
+  	Nombre contacto: Belén Araya.
+  	<br>
+  	Email de contacto: noname@gmail.com.
+  	<br>
+  	Número celular de contacto: +569 95154525.
+  	<br>
+   <img src="img/hq.jpg" id="imagen" width="320" height="240" onclick="cambiaTamanio()" />
+ </div>
+<button class="collapsible"><table border = "1" style="margin: 0 auto;">
+	<th>Spiderman</th>
+	<th>Región del BioBio</th>
+	<th>Concepcion</th>
+	<th>Infantil niño</th>
+	<th>12-14 años</th>
+</table></button>
+<div class="content">
+  	Nombre: Spiderman.
+  	<br>
+  	Descripción: Traje para niño, en buen estado, con mascara incluida.
+  	<br>
+  	Categoría: Infantil niño.
+  	<br>
+  	Talla: 12-14 años.
+  	<br>
+  	Nombre contacto: Pedro Parker.
+  	<br>
+  	Email de contacto: tuvecino@elhombrearaña.com.
+  	<br>
+  	Número celular de contacto: +569 45167852
+  	<br>
+   <img src="img/spiderman.jpg" id="imagen" width="320" height="240" onclick="cambiaTamanio()" />
+ </div>
+<button class="collapsible"><table border = "1" style="margin: 0 auto;">
+	<th>Thor</th>
+	<th>Región metropolitana</th>
+	<th>Estación central</th>
+	<th>Adulto</th>
+	<th>L</th>
+</table></button>
+<div class="content">
+  	Nombre: Thor.
+  	<br>
+  	Descripción: Traje para adulto, en la imagen es el del medio.
+  	<br>
+  	Categoría: Adulto.
+  	<br>
+  	Talla: L.
+  	<br>
+  	Nombre contacto: Juan Perez.
+  	<br>
+  	Email de contacto: elgordothor@gmail.com.
+  	<br>
+  	Número celular de contacto: +569 46781223.
+  	<br>
+   <img src="img/thor.jpg" id="imagen" width="320" height="240" onclick="cambiaTamanio()" />
+</div>
+<div class="container" style="background-color:#f1f1f1">
+      <a href="index.html" type="button">Volver</button>
+    </div>
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.display === "block") {
+      content.style.display = "none";
+    } else {
+      content.style.display = "block";
+    }
+  });
+}
+
+
+function cambiaTamanio(){
+  ima = document.getElementsById('imagen')
+  ima.width = 800;
+  ima.height = 600;
+}
+</script>
+</body>
+</html>
